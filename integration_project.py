@@ -1,7 +1,6 @@
 import requests
 from requests.exceptions import RequestException, Timeout
 
-# Function to handle GET requests
 def fetch_data(url, params=None, retries=3, timeout=10):
     #fetches data 
     attempt = 0
@@ -29,7 +28,6 @@ def fetch_data(url, params=None, retries=3, timeout=10):
     return {"error": "Max retries reached or an error occurred."}
 
 
-# Function to print the API response in a user-friendly way
 def print_api_response(data):
     
     if isinstance(data, dict):
